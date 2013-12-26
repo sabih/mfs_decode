@@ -1,6 +1,6 @@
 <?php
-session_start(); //we need to call PHP's session object to access it through CI
-
+ //we need to call PHP's session object to access it through CI
+/*
 class Home extends CI_Controller {
 
     function __construct()
@@ -8,7 +8,8 @@ class Home extends CI_Controller {
         parent::__construct();
         $this->load->library('session');
         $this->load->helper('url');
-        
+        //session_start();
+        if ( ! $this->session->userdata('username') ) redirect('surveys/login');
     }
     
     function index()
@@ -43,5 +44,5 @@ class Home extends CI_Controller {
         redirect('home');
         
     }
-
+*/
 }
